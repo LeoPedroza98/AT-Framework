@@ -7,11 +7,13 @@
         </b-col>
         
         <b-col md="6">
-          <b-card-body :title="produto.name">
-            <b-card-text>
+          <b-card-body style="color:white" :title="produto.name">
+            <b-card-text style="color:white">
               <b-col> Categoria do Produto: {{ produto.categoria }} </b-col>
 
               <b-col> Quantidade: {{ produto.quantidade }} </b-col>
+
+              <b-col>Link:{{produto.link}}</b-col>
             </b-card-text>
 
             <b-card-text>
@@ -25,18 +27,20 @@
     </b-card>
 
     <div id="edit">
-      <h2>Editar</h2>
+      <h2 style="color:white">Editar</h2>
 
       <div class="form-group" @submit="onSubmit">
-        <label for="Nome"> Nome: </label>
+        <label for="Nome" style="color:white"> Nome: </label>
         <input type="text" class="form-control" id="Nome" v-model="produto.name" />
 
-        <label for="ano"> Categoria: </label>
+        <label for="categoria" style="color:white"> Categoria: </label>
         <input type="text" v-model.trim.lazy="produto.categoria" id="categoria" class="form-control" />
 
-        <label for="quantidade"> Quantidade: </label>
-        <input type="number" v-model.trim.lazy="produto.quantidade" id="quantidade" class="form-control"
-        />
+        <label for="quantidade" style="color:white"> Quantidade: </label>
+        <input type="number" v-model.trim.lazy="produto.quantidade" id="quantidade" class="form-control"/>
+
+        <label for="link" style="color:white">Link:</label>
+        <input type="url" class="form-control" id="link" v-model="produto.link" />
       </div>
     </div>
   </b-container>

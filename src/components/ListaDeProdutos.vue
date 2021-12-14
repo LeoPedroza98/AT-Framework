@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row>
-      <h1>
+      <h1 style="color:white">
         <b-icon icon="bag-plus" animation="spin" font-scale="1"></b-icon>
         Sua Lista de Compras
         <b-icon icon="bag-plus-fill" animation="spin-reverse" font-scale="1"></b-icon>
@@ -22,7 +22,7 @@
       >
         <b-card-text>
           <b-button variant="outline-danger">
-            <router-link tag="span" :to="{ name: 'DetalharProdutos', params: { id: produto.id, produto: produto },}">
+            <router-link style="color:white" tag="span" :to="{ name: 'DetalharProdutos', params: { id: produto.id, produto: produto },}">
               Detalhar
             </router-link>
           </b-button>
@@ -64,6 +64,7 @@ export default {
 <style>
 .card {
   margin: auto;
+  background: grey;
 }
 
 .card-deck {
